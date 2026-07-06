@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    overflow:hidden;
+    color:white;
+    background:linear-gradient(-45deg,#0f172a,#1d4ed8,#7c3aed,#06b6d4);
+    background-size:400% 400%;
+    animation:bg 10s ease infinite;
+}
+
+@keyframes bg{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+/* ===== TOP BAR ===== */
+
+.top-bar{
+    position:absolute;
+    top:20px;
+    left:50%;
+    transform:translateX(-50%);
+    width:92%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 30px;
+    border-radius:18px;
+    background:rgba(255,255,255,.12);
+    backdrop-filter:blur(15px);
+    z-index:100;
+}
+
+.top-bar h1{
+    font-size:28px;
+    font-weight:700;
+}
+
+.right-panel{
+    display:flex;
+    gap:15px;
+}
+
+.score-box,
+.highscore-box{
+    padding:10px 20px;
+    border-radius:12px;
+    background:rgba(255,255,255,.15);
+    font-weight:600;
+}
+
+/* ===== START & GAME OVER ===== */
+
+#instructions,
+#results{
+    position:absolute;
+    inset:0;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:rgba(0,0,0,.45);
+    z-index:99;
+}
+
+#results{
+    display:none;
+}
+
+.glass{
+    width:360px;
+    text-align:center;
+    padding:35px;
+    border-radius:20px;
+    background:rgba(255,255,255,.12);
+    backdrop-filter:blur(18px);
+    box-shadow:0 10px 30px rgba(0,0,0,.3);
+}
+
+.glass h2{
+    margin-bottom:15px;
+    font-size:30px;
+}
+
+.glass p{
+    margin:10px 0;
+    line-height:1.6;
+}
+
+/* ===== BUTTON ===== */
+
+button{
+    margin-top:20px;
+    padding:12px 28px;
+    border:none;
+    border-radius:10px;
+    background:#00c8ff;
+    color:white;
+    font-size:18px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
+}
+
+button:hover{
+    transform:scale(1.07);
+    box-shadow:0 0 20px #00e5ff;
+}
+
+/* ===== CONTROLS ===== */
+
+.controls{
+    position:absolute;
+    bottom:25px;
+    left:50%;
+    transform:translateX(-50%);
+    display:flex;
+    gap:15px;
+    z-index:100;
+}
+
+/* ===== FOOTER ===== */
+
+footer{
+    position:absolute;
+    bottom:8px;
+    width:100%;
+    text-align:center;
+    color:#fff;
+    font-size:14px;
+    opacity:.9;
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media(max-width:768px){
+
+    .top-bar{
+        flex-direction:column;
+        gap:10px;
+        padding:15px;
+    }
+
+    .top-bar h1{
+        font-size:22px;
+    }
+
+    .right-panel{
+        flex-direction:column;
+        width:100%;
+    }
+
+    .score-box,
+    .highscore-box{
+        text-align:center;
+    }
+
+    .glass{
+        width:90%;
+    }
+
+    .controls{
+        flex-direction:column;
+    }
+
+    button{
+        width:220px;
+    }
+}
+
+.top-bar{
+    position:absolute;
+    top:20px;
+    left:50%;
+    transform:translateX(-50%);
+    width:90%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 30px;
+    border-radius:20px;
+    background:rgba(255,255,255,.1);
+    backdrop-filter:blur(12px);
+    color:white;
+    z-index:100;
+}
+
+.top-bar h2{
+    margin:0;
+    font-size:28px;
+}
+
+.game-info{
+    button{
+    padding:12px 25px;
+    border:none;
+    border-radius:12px;
+    background:#00d4ff;
+    color:white;
+    cursor:pointer;
+    font-size:18px;
+    transition:.3s;
+}
+
+button:hover{
+    transform:scale(1.08);
+    box-shadow:0 0 20px cyan;
+}
+    display:flex;
+    align-items:center;
+    gap:20px;
+    font-size:22px;
+}
+#gameOver{
+    display:none;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    background:rgba(20,20,20,.9);
+    padding:40px;
+    border-radius:20px;
+    text-align:center;
+    color:white;
+    box-shadow:0 0 25px cyan;
+}
+#instructions .content{
+    background:rgba(255,255,255,.12);
+    backdrop-filter:blur(10px);
+    color:white;
+    border-radius:20px;
+    box-shadow:0 0 20px rgba(255,255,255,.2);
+}
+body{
+    margin:0;
+    overflow:hidden;
+    background:linear-gradient(135deg,#0f172a,#1e3a8a,#9333ea,#06b6d4);
+    background-size:400% 400%;
+    animation:bg 8s infinite alternate;
+}
+
+@keyframes bg{
+    0%{background-position:left;}
+    100%{background-position:right;}
+}

@@ -1,0 +1,124 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stack Block Game</title>
+
+    <link rel="stylesheet" href="style1.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- ========= TOP BAR ========= -->
+
+    <header class="top-bar">
+
+        <h1>🧱 Stack Block Game</h1>
+
+        <div class="right-panel">
+
+            <div class="score-box">
+                ⭐ Score :
+                <span id="score">0</span>
+            </div>
+
+            <div class="highscore-box">
+                🏆 High :
+                <span id="highScore">0</span>
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- ========= START SCREEN ========= -->
+
+    <div id="instructions">
+
+        <div class="content glass">
+
+            <h2>Welcome 👋</h2>
+
+            <p>
+                Stack every moving block perfectly.
+            </p>
+
+            <p>
+                Click, Tap or Press Space to place blocks.
+            </p>
+
+            <button id="startBtn">
+                ▶ Start Game
+            </button>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ========= GAME OVER ========= -->
+
+    <div id="results">
+
+        <div class="content glass">
+
+            <h2>💀 Game Over</h2>
+
+            <p>Your Score</p>
+
+            <h1 id="finalScore">
+                0
+            </h1>
+
+            <button onclick="location.reload()">
+                🔄 Play Again
+            </button>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ========= CONTROL BUTTONS ========= -->
+
+    <div class="controls">
+
+        <button id="pauseBtn">
+            ⏸ Pause
+        </button>
+
+        <button onclick="location.reload()">
+            🔄 Restart
+        </button>
+
+    </div>
+
+
+
+    <!-- ========= FOOTER ========= -->
+
+    <footer>
+
+        Designed & Developed by
+        <b>Anshu Kumari ❤️</b>
+
+    </footer>
+
+
+
+    <!-- ========= JS ========= -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r124/three.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cannon.js/0.6.2/cannon.min.js"></script>
+
+    <script src="first1.js"></script>
+
+</body>
+</html>
